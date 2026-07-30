@@ -43,7 +43,7 @@ const AIAssistant = () => {
 
       const { data } =
         await axios.post(
-          "http://localhost:5000/api/ai/chat",
+          "https://ai-doctor-booking.onrender.com/api/ai/chat",
           {
             message:
               currentMessage,

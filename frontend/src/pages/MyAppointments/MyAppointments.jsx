@@ -20,7 +20,7 @@ const MyAppointments = () => {
 
         const { data } =
           await axios.get(
-            "http://localhost:5000/api/appointments/my",
+            "https://ai-doctor-booking.onrender.com/api/appointments/my",
             {
               headers: {
                 Authorization:

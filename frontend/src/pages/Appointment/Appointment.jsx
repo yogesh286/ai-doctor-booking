@@ -26,7 +26,7 @@ const Appointment = () => {
   const fetchDoctor = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/doctors/${id}`
+        `https://ai-doctor-booking.onrender.com/api/doctors/${id}`
       );
 
       setDoctor(data);
@@ -45,7 +45,7 @@ const Appointment = () => {
       }
 
       await axios.post(
-        "http://localhost:5000/api/appointments/book",
+        "https://ai-doctor-booking.onrender.com/api/appointments/book",
         {
           doctor: id,
           appointmentDate: selectedDate,
@@ -86,7 +86,7 @@ const Appointment = () => {
       setLoading(true);
 
       const { data } = await axios.post(
-        "http://localhost:5000/api/payment/create-order",
+        "https://ai-doctor-booking.onrender.com/api/payment/create-order",
         {
           amount: doctor.fee,
         }

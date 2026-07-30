@@ -24,7 +24,7 @@ const AuthModal = ({ isOpen, onClose }) => {
       if (isLogin) {
         const { data } =
           await axios.post(
-            "http://localhost:5000/api/auth/login",
+            "https://ai-doctor-booking.onrender.com/api/auth/login",
             {
               email,
               password,
@@ -48,7 +48,7 @@ const AuthModal = ({ isOpen, onClose }) => {
         window.location.reload();
       } else {
         await axios.post(
-          "http://localhost:5000/api/auth/register",
+          "https://ai-doctor-booking.onrender.com/api/auth/register",
           {
             name,
             phone,
